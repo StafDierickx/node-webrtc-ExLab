@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="favicon.jpg">
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+        <script src="/javascript/client.js" defer></script>
+    </head>
+    <body>
+        <p id="peerId"></p>
+        <div style="display: flex; flex-direction: row;">
+            <p>status: </p>
+            <p id="status"></p>
+        </div>
+        <div style="display: flex; border: 2px solid black; width: 100%;">
+            <video id="localVideo" style="max-width: 50%;" autoplay playsinline></video>
+            <video id="remoteVideo" style="max-width: 50%;" autoplay playsinline></video>
+
+        </div>
+
+        <div style="border: 2px solid black; padding: 10px;">
+            <h1>chatbox</h1>
+            <ul id="messages"></ul>
+            <form id="chatbox">
+                <input type="text" name="input" id="input">
+                <button type="submit">Send</button>
+            </form>
+            
+        </div>
+    </body>
+</html>
